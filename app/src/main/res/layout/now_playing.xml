@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/now_playing"
+    android:orientation="vertical"
+    android:background="@color/background_color"
+    android:padding="10dp"
+    android:gravity="center">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/now_playing_label"
+        android:paddingTop="10dp"
+        tools:text="@string/now_playing_label"
+        android:textSize="@dimen/vertical_spacing"
+        android:textStyle="bold">
+    </TextView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/list_artist_or_author"
+        android:paddingTop="10dp"
+        android:textColor="@color/colorAccent"
+        tools:text="@string/list_item_artist_author"
+        android:textStyle="bold">
+    </TextView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/list_title"
+        android:paddingTop="@dimen/padding_between_title_artist"
+        tools:text="@string/list_item_title">
+    </TextView>
+
+</LinearLayout>

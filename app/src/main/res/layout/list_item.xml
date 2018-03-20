@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/layout_items"
+    android:orientation="vertical"
+    android:background="@color/background_color"
+    android:padding="10dp"
+    android:gravity="center">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/file_icon"
+        tools:src="@drawable/ic_launcher_background"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/list_artist_or_author"
+        android:paddingTop="10dp"
+        android:textColor="@color/colorAccent"
+        tools:text="@string/list_item_artist_author"
+        android:textStyle="bold">
+    </TextView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/list_title"
+        android:paddingTop="@dimen/padding_between_title_artist"
+        tools:text="@string/list_item_title">
+    </TextView>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/list_play_button"
+        android:text="Play"
+        android:layout_marginTop="@dimen/padding_between_title_button"/>
+
+</LinearLayout>

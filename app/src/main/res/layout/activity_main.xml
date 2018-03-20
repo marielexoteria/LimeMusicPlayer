@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/background_color"
+    android:paddingTop="@dimen/padding_vertical"
+    android:paddingBottom="@dimen/padding_vertical"
+    tools:context="com.example.android.mymusicplayer.MainActivity"
+    android:gravity="center">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:id="@+id/layout_music"
+        android:orientation="vertical"
+        android:background="@color/category_color"
+        android:paddingTop="@dimen/padding_vertical"
+        android:paddingBottom="@dimen/padding_vertical"
+        android:paddingRight="@dimen/padding_horizontal"
+        android:paddingLeft="@dimen/padding_horizontal"
+        android:gravity="center">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/music_icon"
+            android:layout_marginBottom="@dimen/padding_between_title_button"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/music"
+            android:text="@string/music_view"
+            android:textColor="@color/category_text"
+            android:textSize="@dimen/text_size_category"
+            android:textStyle="bold"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:id="@+id/layout_podcasts"
+        android:orientation="vertical"
+        android:background="@color/category_color"
+        android:paddingTop="@dimen/padding_vertical"
+        android:paddingBottom="@dimen/padding_vertical"
+        android:paddingRight="@dimen/padding_horizontal"
+        android:paddingLeft="@dimen/padding_horizontal"
+        android:layout_marginTop="@dimen/padding_between_categories"
+        android:gravity="center">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/podcasts_icon"
+            android:layout_marginBottom="@dimen/padding_between_title_button"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/podcasts"
+            android:text="@string/podcasts_view"
+            android:textColor="@color/category_text"
+            android:textSize="@dimen/text_size_category"
+            android:textStyle="bold"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:id="@+id/layout_audiobooks"
+        android:orientation="vertical"
+        android:background="@color/category_color"
+        android:paddingTop="@dimen/padding_vertical"
+        android:paddingBottom="@dimen/padding_vertical"
+        android:paddingRight="@dimen/padding_horizontal_audiobooks"
+        android:paddingLeft="@dimen/padding_horizontal_audiobooks"
+        android:layout_marginTop="@dimen/padding_between_categories"
+        android:gravity="center">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/audiobooks_icon"
+            android:layout_marginBottom="@dimen/padding_between_title_button"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/audiobooks"
+            android:text="@string/audiobooks_view"
+            android:textColor="@color/category_text"
+            android:textSize="@dimen/text_size_category"
+            android:textStyle="bold"/>
+
+    </LinearLayout>
+</LinearLayout>

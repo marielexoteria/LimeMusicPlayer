@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#004d40</color>
+    <color name="colorPrimaryDark">#00251a</color>
+    <color name="colorAccent">#0097a7</color> <!-- original color: #ff4081 -->
+
+    <!-- Background color for all views -->
+    <color name="background_color">#fafafa</color> <!-- evt. #fff -->
+
+    <!-- Color used for the different categories-->
+    <color name="category_color">#cddc39</color>
+
+    <!-- Color for the text to be displayed in each category -->
+    <color name="category_text">#000</color>
+
+    <!-- Color for the initial text to be displayed (title + artist or author) - to be removed later -->
+    <color name="info_text">#ff0000</color>
+</resources>

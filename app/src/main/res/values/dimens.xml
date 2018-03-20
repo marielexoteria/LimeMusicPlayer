@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Padding used on activity_main.xml -->
+    <dimen name="padding_horizontal">80dp</dimen>
+    <dimen name="padding_horizontal_audiobooks">70dp</dimen>
+    <dimen name="padding_between_categories">25dp</dimen>
+
+    <!-- Padding used in list_item.xml -->
+    <dimen name="padding_vertical">20dp</dimen>
+
+    <!-- Size of the category text -->
+    <dimen name="text_size_category">18sp</dimen>
+
+    <!-- Height of each list item -->
+    <dimen name="list_item_height">88dp</dimen>
+
+    <!-- Padding between title and artist/author-->
+    <dimen name="padding_between_title_artist">5dp</dimen>
+
+    <!-- Padding between title and play button-->
+    <dimen name="padding_between_title_button">10dp</dimen>
+
+    <!-- Padding used on the GridView (sound_file_list.xml) -->
+    <dimen name="vertical_spacing">20dp</dimen>
+    <dimen name="horizontal_spacing">20dp</dimen>
+
+</resources>
