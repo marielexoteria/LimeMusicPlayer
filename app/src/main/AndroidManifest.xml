@@ -18,15 +18,17 @@
         </activity>
         <activity
             android:name=".MusicActivity"
-            android:label="@string/title_music_view" />
+            android:label="@string/music_view" />
         <activity
             android:name=".PodcastsActivity"
-            android:label="@string/title_podcasts_view" />
+            android:label="@string/podcasts_view" />
         <activity
             android:name=".AudiobooksActivity"
-            android:label="@string/title_audiobooks_view" />
-        <activity android:name=".ListItemActivity" />
-        <activity android:name=".NowPlaying"></activity>
+            android:label="@string/audiobooks_view" />
+        <activity android:name=".NowPlayingActivity"
+            android:label="@string/now_playing_view">
+
+        </activity>
     </application>
 
 </manifest>

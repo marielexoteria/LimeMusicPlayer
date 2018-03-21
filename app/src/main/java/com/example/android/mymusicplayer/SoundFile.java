@@ -19,16 +19,15 @@ public class SoundFile {
     //Title of the sound file (music/podcast/audiobook)
     private String mTitle;
 
-    //Color of the text according to the category chosen
-    private int mTextColor;
-
+    //Image for the Now Playing activity
+    private int mNowPlayingImage;
 
     //Creating the constructor
-    public SoundFile (int icon, String artistOrAuthor, String title, int textColor) {
+    public SoundFile (int icon, String artistOrAuthor, String title, int nowPlayingImage) {
         mIcon = icon;
         mArtistOrAuthor = artistOrAuthor;
         mTitle = title;
-        mTextColor = textColor;
+        mNowPlayingImage = nowPlayingImage;
     }
 
     //Get the icon of the sound file
@@ -46,9 +45,10 @@ public class SoundFile {
         return mTitle;
     }
 
-    //Get the color of the text according to the category (music/podcast/audiobook)
-    public int getTextColor() {
-        return mTextColor;
+    //Get the image according to the sound file to display in the Now Playing activity
+    public int getmNowPlayingImageID() {
+
+        return mNowPlayingImage;
     }
 
 }

@@ -1,15 +1,13 @@
 <resources>
     <string name="app_name">MyMusicPlayer</string>
 
-    <!-- Names of the views in this app -->
+    <!-- Titles to display when a user click on the views -->
     <string name="music_view">Music</string>
     <string name="podcasts_view">Podcasts</string>
     <string name="audiobooks_view">Audiobooks</string>
+    <string name="now_playing_view">Now Playing</string>
 
-    <!-- Titles to display when a user click on the views -->
-    <string name="title_music_view">MyMusicPlayer > Music</string>
-    <string name="title_podcasts_view">MyMusicPlayer > Podcasts</string>
-    <string name="title_audiobooks_view">MyMusicPlayer > Audiobooks</string>
+    <!-- Label of the play button used in list_item.xml -->
     <string name="play_button">Play</string>
 
     <!-- Initial text for the TextViews in list_item.xml -->

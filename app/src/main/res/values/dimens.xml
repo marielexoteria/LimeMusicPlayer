@@ -24,4 +24,11 @@
     <dimen name="vertical_spacing">20dp</dimen>
     <dimen name="horizontal_spacing">20dp</dimen>
 
+    <!-- Sizes used in now_playing.xml -->
+    <dimen name="artist_or_author_label">20sp</dimen>
+    <dimen name="title_label">16sp</dimen>
+
+    <!-- Size for the pseudo button in circle_progress_bar.xml -->
+    <dimen name="progress_bar_button">15dp</dimen>
+
 </resources>

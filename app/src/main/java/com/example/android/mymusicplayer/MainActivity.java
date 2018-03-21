@@ -21,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        //Initializing variables that will find the views
+        //Initializing the variables that will find the views
         LinearLayout layoutMusic = (LinearLayout) findViewById(R.id.layout_music);
         LinearLayout layoutPodcasts = (LinearLayout) findViewById(R.id.layout_podcasts);
         LinearLayout layoutAudiobooks = (LinearLayout) findViewById(R.id.layout_audiobooks);
@@ -46,7 +46,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        //Set a click listener on the Voice Notes view
+        //Set a click listener on the Audiobooks view
         layoutAudiobooks.setOnClickListener(new View.OnClickListener() {
             // The code in this method will be executed when the Voice Notes View is clicked on.
             @Override

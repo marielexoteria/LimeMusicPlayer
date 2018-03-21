@@ -5,7 +5,6 @@
     android:layout_height="match_parent"
     android:id="@+id/layout_items"
     android:orientation="vertical"
-    android:background="@color/background_color"
     android:padding="10dp"
     android:gravity="center">
 
@@ -20,7 +19,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/list_artist_or_author"
         android:paddingTop="10dp"
-        android:textColor="@color/colorAccent"
+        android:textColor="@color/category_text"
         tools:text="@string/list_item_artist_author"
         android:textStyle="bold">
     </TextView>
@@ -33,11 +32,11 @@
         tools:text="@string/list_item_title">
     </TextView>
 
-    <Button
+    <ImageButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/list_play_button"
-        android:text="Play"
+        android:background="@drawable/play_button_2"
         android:layout_marginTop="@dimen/padding_between_title_button"/>
 
 </LinearLayout>

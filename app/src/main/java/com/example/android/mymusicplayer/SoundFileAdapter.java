@@ -1,14 +1,16 @@
 package com.example.android.mymusicplayer;
 
 import android.app.Activity;
-import android.media.Image;
+import android.content.Context;
+import android.content.Intent;
 import android.support.annotation.NonNull;
-import android.view.Gravity;
+import android.support.v4.content.ContextCompat;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -20,37 +22,95 @@ import java.util.ArrayList;
 public class SoundFileAdapter extends ArrayAdapter<SoundFile> {
     private static final String LOG_TAG = SoundFileAdapter.class.getSimpleName();
 
+    //Resource ID for the background color of each grid item.
+    private int mItemBgColor;
+
     /*
-     * Adapter used in the custom class SoundFile.java
-     * It will get the position of the current item in the ArrayList and extract the info
+     * Variable that will get the context in order to start an activity.
+     * Used to open the Now Playing view when a user clicks on the Play button on each grid item.
+     */
+    private Context activityContext;
+
+    /*
+     * Adapter used in the custom class SoundFile.java.
+     * It will get the position of the current item in the ArrayList and extract the info.
+     *
+     * This is our own custom constructor (it doesn't mirror a superclass constructor).
+     * The context is used to inflate the layout file, and the list is the data we want
+     * to populate into the lists.
+     * itemColor gets the background color used in each grid item on list_item.xml.
+     * @param context        The current context. Used to inflate the layout file.
+     * @param musicFiles     A List of SoundFile objects to display in a list.
+     * @param itemBgColor      The background color of an item displayed on list_item.xml
     */
-    public SoundFileAdapter (Activity context, ArrayList<SoundFile> musicFiles) {
+    public SoundFileAdapter (Activity context, ArrayList<SoundFile> musicFiles, int itemBgColor) {
+
+        /*
+         * Here, we initialize the ArrayAdapter's internal storage for the context and the list.
+         the second argument is used when the ArrayAdapter is populating a single TextView.
+         Because this is a custom adapter for three TextViews, the adapter is not
+         going to use this second argument, so it can be any value. Here, we used 0.
+        */
         super(context, 0, musicFiles);
+        mItemBgColor = itemBgColor;
+        activityContext = context;
     }
 
     @NonNull
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-        View listItemView = convertView;
-        if (listItemView == null) {
-            listItemView = LayoutInflater.from(getContext()).inflate(R.layout.list_item, parent, false);
+        View gridItemView = convertView;
+        if (gridItemView == null) {
+            gridItemView = LayoutInflater.from(getContext()).inflate(R.layout.list_item, parent, false);
         }
 
-        //Display icons and file info
+        //Display icons and file info.
         SoundFile currentSoundFile = getItem(position);
-        ImageView iconImageView = (ImageView) listItemView.findViewById(R.id.file_icon);
+        ImageView iconImageView = (ImageView) gridItemView.findViewById(R.id.file_icon);
         iconImageView.setImageResource(currentSoundFile.getIconID());
 
-        TextView artistOrAuthorTextView = (TextView) listItemView.findViewById(R.id.list_artist_or_author);
+        TextView artistOrAuthorTextView = (TextView) gridItemView.findViewById(R.id.list_artist_or_author);
         artistOrAuthorTextView.setText(currentSoundFile.getArtistOrAuthor());
-        artistOrAuthorTextView.setTextColor(currentSoundFile.getTextColor());
 
-        TextView titleTextView = (TextView) listItemView.findViewById(R.id.list_title);
+        TextView titleTextView = (TextView) gridItemView.findViewById(R.id.list_title);
         titleTextView.setText(currentSoundFile.getTitle());
 
-        return listItemView;
+       /* Declaring variable to get the resource ID of the view layout_items (list_item.xml)
+         * to avoid the warning "The id R.id.layout_items has already been looked up in this
+         * method; possible cut & paste error?" when looking up the view for 2 different end results.
+        */
+        int layoutItems = R.id.layout_items;
+
+        //Setting the background color for each grid item.
+        View itemContainer = gridItemView.findViewById(layoutItems);
+        int color = ContextCompat.getColor(getContext(), mItemBgColor);
+        itemContainer.setBackgroundColor(color);
+
+        //Opening the Now Playing activity upon clicking on "Play".
+        /*ImageButton playButton = gridItemView.findViewById(R.id.list_play_button);
+        playButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent nowPlayingIntent = new Intent(activityContext, NowPlaying.class);
+                activityContext.startActivity(nowPlayingIntent);
+            }
+        });*/
+
+        //Opening the Now Playing activity upon clicking anywhere in the grid item.
+        LinearLayout playFile = gridItemView.findViewById(layoutItems);
+        playFile.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent nowPlayingIntent = new Intent(activityContext, NowPlayingActivity.class);
+                activityContext.startActivity(nowPlayingIntent);
+            }
+        });
+
+
+        return gridItemView;
 
     }
+
 
 
 }
