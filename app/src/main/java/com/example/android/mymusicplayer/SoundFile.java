@@ -1,5 +1,8 @@
 package com.example.android.mymusicplayer;
 
+import android.os.Parcel;
+import android.os.Parcelable;
+
 /**
  * Created by marielbackman on 19/03/2018.
  */
@@ -8,7 +11,7 @@ package com.example.android.mymusicplayer;
  * Custom class that will populate the ArrayList in MusicActivity.java,
  * PodcastsActivity.java and AudiobooksActivity.java
  */
-public class SoundFile {
+public class SoundFile implements Parcelable {
 
     //Icon for the different sound files
     private int mIcon;
@@ -49,6 +52,37 @@ public class SoundFile {
     public int getmNowPlayingImageID() {
 
         return mNowPlayingImage;
+    }
+
+    protected SoundFile(Parcel in) {
+        mIcon = in.readInt();
+        mArtistOrAuthor = in.readString();
+        mTitle = in.readString();
+        mNowPlayingImage = in.readInt();
+    }
+
+    public static final Creator<SoundFile> CREATOR = new Creator<SoundFile>() {
+        @Override
+        public SoundFile createFromParcel(Parcel in) {
+            return new SoundFile(in);
+        }
+
+        @Override
+        public SoundFile[] newArray(int size) {
+            return new SoundFile[size];
+        }
+    };
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    @Override
+    public void writeToParcel(Parcel dest, int flags) {
+        dest.writeInt(mIcon);
+        dest.writeString(mArtistOrAuthor);
+        dest.writeString(mTitle);
+        dest.writeInt(mNowPlayingImage);
     }
 
 }

@@ -65,7 +65,7 @@ public class SoundFileAdapter extends ArrayAdapter<SoundFile> {
         }
 
         //Display icons and file info.
-        SoundFile currentSoundFile = getItem(position);
+        final SoundFile currentSoundFile = getItem(position);
         ImageView iconImageView = (ImageView) gridItemView.findViewById(R.id.file_icon);
         iconImageView.setImageResource(currentSoundFile.getIconID());
 
@@ -75,33 +75,17 @@ public class SoundFileAdapter extends ArrayAdapter<SoundFile> {
         TextView titleTextView = (TextView) gridItemView.findViewById(R.id.list_title);
         titleTextView.setText(currentSoundFile.getTitle());
 
-       /* Declaring variable to get the resource ID of the view layout_items (list_item.xml)
-         * to avoid the warning "The id R.id.layout_items has already been looked up in this
-         * method; possible cut & paste error?" when looking up the view for 2 different end results.
-        */
-        int layoutItems = R.id.layout_items;
-
-        //Setting the background color for each grid item.
-        View itemContainer = gridItemView.findViewById(layoutItems);
+       //Setting the background color for each grid item.
+        LinearLayout playFile = gridItemView.findViewById(R.id.layout_items);
         int color = ContextCompat.getColor(getContext(), mItemBgColor);
-        itemContainer.setBackgroundColor(color);
-
-        //Opening the Now Playing activity upon clicking on "Play".
-        /*ImageButton playButton = gridItemView.findViewById(R.id.list_play_button);
-        playButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent nowPlayingIntent = new Intent(activityContext, NowPlaying.class);
-                activityContext.startActivity(nowPlayingIntent);
-            }
-        });*/
+        playFile.setBackgroundColor(color);
 
         //Opening the Now Playing activity upon clicking anywhere in the grid item.
-        LinearLayout playFile = gridItemView.findViewById(layoutItems);
         playFile.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent nowPlayingIntent = new Intent(activityContext, NowPlayingActivity.class);
+                nowPlayingIntent.putExtra(NowPlayingActivity.EXTRA_SOUND_FILE, currentSoundFile);
                 activityContext.startActivity(nowPlayingIntent);
             }
         });
