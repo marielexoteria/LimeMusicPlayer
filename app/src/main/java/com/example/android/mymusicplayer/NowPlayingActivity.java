@@ -24,9 +24,8 @@ public class NowPlayingActivity extends AppCompatActivity {
         if (extras != null) {
             TextView myTextView = (TextView)findViewById(R.id.artist_or_author);
             myTextView.setText(extras.getString("Artist X"));
-            SoundFile file = getIntent().getExtras().getParcelable(EXTRA_SOUND_FILE);
         }
-
+        SoundFile file = getIntent().getExtras().getParcelable(EXTRA_SOUND_FILE);
 
     }
 
