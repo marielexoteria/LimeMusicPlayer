@@ -29,7 +29,8 @@
         android:layout_height="wrap_content"
         android:id="@+id/list_title"
         android:paddingTop="@dimen/padding_between_title_artist"
-        tools:text="@string/list_item_title">
+        tools:text="@string/list_item_title"
+        android:gravity="center">
     </TextView>
 
     <ImageButton

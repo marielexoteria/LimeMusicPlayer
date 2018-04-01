@@ -26,14 +26,14 @@ public class AudiobooksActivity extends AppCompatActivity {
          * @param artistOrAuthor    The author of the audiobook, for ex. J.K. Rowling
          * @param title             The title of the audiobook, for ex. Harry Potter and the Sorcerer's Stone
          */
-        audiobookFiles.add(new SoundFile(R.drawable.audiobooks_icon, "Author A", "Audiobook 1", R.drawable.audiobook_image_now_playing));
-        audiobookFiles.add(new SoundFile(R.drawable.audiobooks_icon, "Author B", "Audiobook 2", R.drawable.audiobook_image_now_playing));
-        audiobookFiles.add(new SoundFile(R.drawable.audiobooks_icon, "Author C", "Audiobook 3", R.drawable.audiobook_image_now_playing));
-        audiobookFiles.add(new SoundFile(R.drawable.audiobooks_icon, "Author D", "Audiobook 4", R.drawable.audiobook_image_now_playing));
-        audiobookFiles.add(new SoundFile(R.drawable.audiobooks_icon, "Author E", "Audiobook 5", R.drawable.audiobook_image_now_playing));
-        audiobookFiles.add(new SoundFile(R.drawable.audiobooks_icon, "Author F", "Audiobook 6", R.drawable.audiobook_image_now_playing));
-        audiobookFiles.add(new SoundFile(R.drawable.audiobooks_icon, "Author G", "Audiobook 7", R.drawable.audiobook_image_now_playing));
-        audiobookFiles.add(new SoundFile(R.drawable.audiobooks_icon, "Author H", "Audiobook 8", R.drawable.audiobook_image_now_playing));
+        audiobookFiles.add(new SoundFile(R.drawable.audiobooks_icon, "JK Rowling", "Fantastic beasts and where to find them", R.drawable.audiobook_image_now_playing));
+        audiobookFiles.add(new SoundFile(R.drawable.audiobooks_icon, "Paola Chaljub", "Soltera en tiempos modernos", R.drawable.audiobook_image_now_playing));
+        audiobookFiles.add(new SoundFile(R.drawable.audiobooks_icon, "Stieg Larsson", "Män som hatar kvinnor", R.drawable.audiobook_image_now_playing));
+        audiobookFiles.add(new SoundFile(R.drawable.audiobooks_icon, "Gabriel G. Márquez", "Del amor y otros demonios", R.drawable.audiobook_image_now_playing));
+        audiobookFiles.add(new SoundFile(R.drawable.audiobooks_icon, "Camilla Läckberg", "Olycksfågeln", R.drawable.audiobook_image_now_playing));
+        audiobookFiles.add(new SoundFile(R.drawable.audiobooks_icon, "Isabel Allende", "El cuaderno de Maya", R.drawable.audiobook_image_now_playing));
+        audiobookFiles.add(new SoundFile(R.drawable.audiobooks_icon, "Jacinto Gimbernard", "Medalaganario", R.drawable.audiobook_image_now_playing));
+        audiobookFiles.add(new SoundFile(R.drawable.audiobooks_icon, "Jens Lapidus", "Snabba cash", R.drawable.audiobook_image_now_playing));
 
         //Creating a GridView to display the tracks - child views and applying the background color
         SoundFileAdapter audiobookItemsAdapter = new SoundFileAdapter(this, audiobookFiles, R.color.background_color);

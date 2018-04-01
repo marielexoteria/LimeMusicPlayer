@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">MyMusicPlayer</string>
+    <string name="app_name">LimeMusicPlayer</string>
 
     <!-- Titles to display when a user click on the views -->
     <string name="music_view">Music</string>

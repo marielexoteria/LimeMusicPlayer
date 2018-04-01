@@ -25,14 +25,14 @@ public class MusicActivity extends AppCompatActivity {
          * @param artistOrAuthor    The artist of a music file, for ex. Michael Jackson
          * @param title             The title of the song, for ex. Beat It
          */
-        musicFiles.add(new SoundFile(R.drawable.music_icon, "Artist A", "Title 1", R.drawable.music_image_now_playing));
-        musicFiles.add(new SoundFile(R.drawable.music_icon, "Artist B", "Title 2", R.drawable.music_image_now_playing));
-        musicFiles.add(new SoundFile(R.drawable.music_icon, "Artist C", "Title 3", R.drawable.music_image_now_playing));
-        musicFiles.add(new SoundFile(R.drawable.music_icon, "Artist D", "Title 4", R.drawable.music_image_now_playing));
-        musicFiles.add(new SoundFile(R.drawable.music_icon, "Artist E", "Title 5", R.drawable.music_image_now_playing));
-        musicFiles.add(new SoundFile(R.drawable.music_icon, "Artist F", "Title 6", R.drawable.music_image_now_playing));
-        musicFiles.add(new SoundFile(R.drawable.music_icon, "Artist G", "Title 7", R.drawable.music_image_now_playing));
-        musicFiles.add(new SoundFile(R.drawable.music_icon, "Artist H", "Title 8", R.drawable.music_image_now_playing));
+        musicFiles.add(new SoundFile(R.drawable.music_icon, "Michael Jackson", "Beat it", R.drawable.music_image_now_playing));
+        musicFiles.add(new SoundFile(R.drawable.music_icon, "A band of bitches", "Mambo en trompeta", R.drawable.music_image_now_playing));
+        musicFiles.add(new SoundFile(R.drawable.music_icon, "Juan Luis Guerra", "Fogaraté", R.drawable.music_image_now_playing));
+        musicFiles.add(new SoundFile(R.drawable.music_icon, "Earth, Wind & Fire", "Beijo", R.drawable.music_image_now_playing));
+        musicFiles.add(new SoundFile(R.drawable.music_icon, "Erasure", "Breath of life", R.drawable.music_image_now_playing));
+        musicFiles.add(new SoundFile(R.drawable.music_icon, "Otros Aires", "El amor que se baila", R.drawable.music_image_now_playing));
+        musicFiles.add(new SoundFile(R.drawable.music_icon, "Bajofondo Tango Club", "Montserrat", R.drawable.music_image_now_playing));
+        musicFiles.add(new SoundFile(R.drawable.music_icon, "Rita Indiana y sus misterios", "El blú del ping pong", R.drawable.music_image_now_playing));
 
         //Creating a GridView to display the tracks - child views and applying the background color
         SoundFileAdapter musicItemsAdapter = new SoundFileAdapter(this, musicFiles, R.color.background_color);
