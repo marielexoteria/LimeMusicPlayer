@@ -49,7 +49,7 @@ public class SoundFile implements Parcelable {
     }
 
     //Get the image according to the sound file to display in the Now Playing activity
-    public int getmNowPlayingImageID() {
+    public int getNowPlayingImageID() {
 
         return mNowPlayingImage;
     }

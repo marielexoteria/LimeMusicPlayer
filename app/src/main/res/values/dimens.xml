@@ -27,6 +27,8 @@
     <!-- Sizes used in now_playing.xml -->
     <dimen name="artist_or_author_label">20sp</dimen>
     <dimen name="title_label">16sp</dimen>
+    <dimen name="space_between_elements">10dp</dimen>
+    <dimen name="duration_bar">1dp</dimen>
 
     <!-- Size for the pseudo button in circle_progress_bar.xml -->
     <dimen name="progress_bar_button">15dp</dimen>

@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 public class NowPlayingActivity extends AppCompatActivity {
@@ -15,18 +16,23 @@ public class NowPlayingActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-
         super.onCreate(savedInstanceState);
         setContentView(R.layout.now_playing);
 
         // Get the data from previous activity (selected song in the playlist) and display it
         Bundle extras = getIntent().getExtras();
         if (extras != null) {
-            TextView myTextView = (TextView)findViewById(R.id.artist_or_author);
-            myTextView.setText(extras.getString("Artist X"));
-        }
-        SoundFile file = getIntent().getExtras().getParcelable(EXTRA_SOUND_FILE);
+            SoundFile file = getIntent().getExtras().getParcelable(EXTRA_SOUND_FILE);
 
+            ImageView nowPlayingFileImage = (ImageView)findViewById(R.id.now_playing_file_image);
+            nowPlayingFileImage.setImageResource(file.getNowPlayingImageID());
+
+            TextView nowPlayingArtistOrAuthor = (TextView)findViewById(R.id.now_playing_artist_or_author);
+            nowPlayingArtistOrAuthor.setText(file.getArtistOrAuthor());
+
+            TextView nowPlayingTitle = (TextView)findViewById(R.id.now_playing_title);
+            nowPlayingTitle.setText(file.getTitle());
+        }
     }
 
 }

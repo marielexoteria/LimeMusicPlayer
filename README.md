@@ -18,7 +18,7 @@ Cannot be used for commercial purposes.
 Acknowledgments
 Music icon: music album by Bestdesignmarket from the Noun Project - https://thenounproject.com/term/music-album/1250959/ 
 
-Podcast  icon: podcast by Jamison Wieser from the Noun Project - https://thenounproject.com/term/podcast/663013/ 
+Podcasts icon: podcast by Jamison Wieser from the Noun Project - https://thenounproject.com/term/podcast/663013/ 
 
 Audiobooks icon: Audio Book by Becris from the Noun Project - https://thenounproject.com/term/audio-book/1461721/
 
