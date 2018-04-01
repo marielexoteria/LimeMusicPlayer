@@ -56,8 +56,7 @@ public class SoundFile implements Parcelable {
 
     //Using the Parcelable interface to read the info about the pertinent file
     //in the position of the GridItem when the user of the app touches a specific file
-    //s/he wants to listen to
-
+    //they want to listen to
     protected SoundFile(Parcel in) {
         mIcon = in.readInt();
         mArtistOrAuthor = in.readString();

@@ -1,16 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
-
-<GridView xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/sound_file_grid"
-    android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:numColumns="2"
-    android:padding="@dimen/padding_vertical"
-    android:verticalSpacing="@dimen/vertical_spacing"
-    android:horizontalSpacing="@dimen/horizontal_spacing"
-    android:stretchMode="columnWidth"
-    android:background="@color/background_color"
-    tools:context="com.example.android.mymusicplayer.MainActivity" />
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
+    <GridView
+        android:id="@+id/sound_file_grid"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:numColumns="2"
+        android:padding="@dimen/padding_vertical"
+        android:verticalSpacing="@dimen/vertical_spacing"
+        android:horizontalSpacing="@dimen/horizontal_spacing"
+        android:stretchMode="columnWidth"
+        android:background="@color/background_color"
+        tools:context="com.example.android.mymusicplayer.MainActivity"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/back_to_main_screen"
+        android:text="Back to main screen"
+        android:layout_marginTop="@dimen/space_between_elements"
+        android:layout_marginBottom="@dimen/space_between_elements"/>
+
+</LinearLayout>

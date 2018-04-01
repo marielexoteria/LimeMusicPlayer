@@ -20,7 +20,6 @@ import java.util.ArrayList;
  */
 
 public class SoundFileAdapter extends ArrayAdapter<SoundFile> {
-    private static final String LOG_TAG = SoundFileAdapter.class.getSimpleName();
 
     //Resource ID for the background color of each grid item.
     private int mItemBgColor;
@@ -89,7 +88,6 @@ public class SoundFileAdapter extends ArrayAdapter<SoundFile> {
                 activityContext.startActivity(nowPlayingIntent);
             }
         });
-
 
         return gridItemView;
 
