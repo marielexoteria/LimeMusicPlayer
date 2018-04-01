@@ -21,7 +21,8 @@ public class NowPlayingActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.now_playing);
 
-        // Get the data from previous activity (selected song in the playlist) and display it
+        //Get the data from previous activity (selected song in the playlist) and display it
+        //Help from my mentor: how to get the TextViews to display the correct sound file info
         Bundle extras = getIntent().getExtras();
         if (extras != null) {
             SoundFile file = getIntent().getExtras().getParcelable(EXTRA_SOUND_FILE);
