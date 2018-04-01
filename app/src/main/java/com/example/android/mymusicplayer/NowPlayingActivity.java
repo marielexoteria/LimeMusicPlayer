@@ -8,7 +8,9 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class NowPlayingActivity extends AppCompatActivity {
 
@@ -32,6 +34,16 @@ public class NowPlayingActivity extends AppCompatActivity {
 
             TextView nowPlayingTitle = (TextView)findViewById(R.id.now_playing_title);
             nowPlayingTitle.setText(file.getTitle());
+
+            //As the functionality of a music player app is not required, I wanted to display toasts in case
+            //a user clicks/touches on the 3 buttons that simulate a player app
+            LinearLayout musicControls = (LinearLayout)findViewById(R.id.music_controls);
+            musicControls.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Toast.makeText(NowPlayingActivity.this, "Just a mockup - for now ;)", Toast.LENGTH_SHORT).show();
+                }
+            });
         }
     }
 
