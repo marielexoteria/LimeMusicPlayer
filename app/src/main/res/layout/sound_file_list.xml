@@ -4,7 +4,30 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="@color/background_color">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/back_to_main_screen"
+            android:text="Back to main screen"
+            android:layout_margin="@dimen/vertical_spacing"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/view_as_separator"
+            android:layout_gravity="center"
+            android:background="@color/category_color" />
+
+    </LinearLayout>
+
+
 
     <GridView
         android:id="@+id/sound_file_grid"
@@ -18,13 +41,5 @@
         android:stretchMode="columnWidth"
         android:background="@color/background_color"
         tools:context="com.example.android.mymusicplayer.MainActivity"/>
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/back_to_main_screen"
-        android:text="Back to main screen"
-        android:layout_marginTop="@dimen/space_between_elements"
-        android:layout_marginBottom="@dimen/space_between_elements"/>
 
 </LinearLayout>

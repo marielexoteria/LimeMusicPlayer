@@ -2,6 +2,8 @@ package com.example.android.mymusicplayer;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.GridView;
 
 import java.util.ArrayList;
@@ -36,6 +38,16 @@ public class PodcastsActivity extends AppCompatActivity {
         GridView podcastGridView = (GridView) findViewById(R.id.sound_file_grid);
         podcastGridView.setAdapter(podcastItemsAdapter);
         podcastGridView.setBackgroundColor(getResources().getColor(R.color.category_color));
+
+        //Adding functionality of the back button > going back to the previous screen
+        //Answer from https://stackoverflow.com/questions/4038479/android-go-back-to-previous-activity
+        final Button backToPreviousScreen = (Button)findViewById(R.id.back_to_main_screen);
+        backToPreviousScreen.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                onBackPressed();
+            }
+        });
     }
 
 }

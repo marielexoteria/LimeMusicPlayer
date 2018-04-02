@@ -19,5 +19,5 @@
 
     <!-- Text used in now_playing.xml -->
     <string name="now_playing_label">Now Playing</string>
-    <string name="button_back_to_library">Back to library</string>
+    <string name="button_back_to_library">Back to playlist</string>
 </resources>

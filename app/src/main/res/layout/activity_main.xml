@@ -20,8 +20,8 @@
         android:background="@color/category_color"
         android:paddingTop="@dimen/padding_vertical"
         android:paddingBottom="@dimen/padding_vertical"
-        android:paddingRight="@dimen/padding_horizontal"
-        android:paddingLeft="@dimen/padding_horizontal"
+        android:paddingRight="@dimen/padding_horizontal_music"
+        android:paddingLeft="@dimen/padding_horizontal_music"
         android:gravity="center">
 
         <ImageView
@@ -50,8 +50,8 @@
         android:background="@color/category_color"
         android:paddingTop="@dimen/padding_vertical"
         android:paddingBottom="@dimen/padding_vertical"
-        android:paddingRight="@dimen/padding_horizontal"
-        android:paddingLeft="@dimen/padding_horizontal"
+        android:paddingRight="@dimen/padding_horizontal_podcasts"
+        android:paddingLeft="@dimen/padding_horizontal_podcasts"
         android:layout_marginTop="@dimen/padding_between_categories"
         android:gravity="center">
 

@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!-- Padding used on activity_main.xml -->
-    <dimen name="padding_horizontal">80dp</dimen>
+    <dimen name="padding_horizontal_music">90dp</dimen>
+    <dimen name="padding_horizontal_podcasts">80dp</dimen>
     <dimen name="padding_horizontal_audiobooks">70dp</dimen>
     <dimen name="padding_between_categories">25dp</dimen>
 
@@ -23,6 +24,7 @@
     <!-- Padding used on the GridView (sound_file_list.xml) -->
     <dimen name="vertical_spacing">20dp</dimen>
     <dimen name="horizontal_spacing">20dp</dimen>
+    <dimen name="view_as_separator">5dp</dimen>
 
     <!-- Sizes used in now_playing.xml -->
     <dimen name="artist_or_author_label">20sp</dimen>

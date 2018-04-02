@@ -51,7 +51,7 @@ public class NowPlayingActivity extends AppCompatActivity {
             backToPreviousScreen.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    finish();
+                    onBackPressed();
                 }
             });
         }
