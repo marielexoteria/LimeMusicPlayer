@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:id="@+id/layout_items"
     android:orientation="vertical"
-    android:padding="10dp"
+    android:padding="@dimen/space_between_elements"
     android:gravity="center">
 
     <ImageView
@@ -18,7 +18,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/list_artist_or_author"
-        android:paddingTop="10dp"
+        android:paddingTop="@dimen/space_between_elements"
         android:textColor="@color/category_text"
         tools:text="@string/list_item_artist_author"
         android:textStyle="bold">
