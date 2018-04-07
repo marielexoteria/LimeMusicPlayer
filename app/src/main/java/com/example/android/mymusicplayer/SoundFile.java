@@ -17,16 +17,16 @@ public class SoundFile implements Parcelable {
     private int mIcon;
 
     // /Artist or author of the sound file (music/podcast/audiobook)
-    private String mArtistOrAuthor;
+    private int mArtistOrAuthor;
 
     //Title of the sound file (music/podcast/audiobook)
-    private String mTitle;
+    private int mTitle;
 
     //Image for the Now Playing activity
     private int mNowPlayingImage;
 
     //Creating the constructor
-    public SoundFile (int icon, String artistOrAuthor, String title, int nowPlayingImage) {
+    public SoundFile (int icon, int artistOrAuthor, int title, int nowPlayingImage) {
         mIcon = icon;
         mArtistOrAuthor = artistOrAuthor;
         mTitle = title;
@@ -39,12 +39,12 @@ public class SoundFile implements Parcelable {
     }
 
     //Get the artist or author of the sound file (music/podcast/audiobook)
-    public String getArtistOrAuthor() {
+    public int getArtistOrAuthor() {
         return mArtistOrAuthor;
     }
 
     //Get the title of the sound file (music/podcast/audiobook)
-    public String getTitle() {
+    public int getTitle() {
         return mTitle;
     }
 
@@ -59,8 +59,8 @@ public class SoundFile implements Parcelable {
     //they want to listen to
     protected SoundFile(Parcel in) {
         mIcon = in.readInt();
-        mArtistOrAuthor = in.readString();
-        mTitle = in.readString();
+        mArtistOrAuthor = in.readInt();
+        mTitle = in.readInt();
         mNowPlayingImage = in.readInt();
     }
 
@@ -83,8 +83,8 @@ public class SoundFile implements Parcelable {
     @Override
     public void writeToParcel(Parcel dest, int flags) {
         dest.writeInt(mIcon);
-        dest.writeString(mArtistOrAuthor);
-        dest.writeString(mTitle);
+        dest.writeInt(mArtistOrAuthor);
+        dest.writeInt(mTitle);
         dest.writeInt(mNowPlayingImage);
     }
 

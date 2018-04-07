@@ -24,7 +24,7 @@
     <!-- Padding used on the GridView (sound_file_list.xml) -->
     <dimen name="vertical_spacing">20dp</dimen>
     <dimen name="horizontal_spacing">20dp</dimen>
-    <dimen name="view_as_separator">5dp</dimen>
+    <dimen name="num_of_columns">2</dimen>
 
     <!-- Sizes used in now_playing.xml -->
     <dimen name="artist_or_author_label">20sp</dimen>

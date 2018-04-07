@@ -14,10 +14,6 @@
     <string name="list_item_artist_author">Artist X</string>
     <string name="list_item_title">Title X</string>
 
-    <!-- Label on the back button used in sound_file_list.xml -->
-    <string name="button_back_to_main_screen">Back to main screen</string>
-
-    <!-- Text used in now_playing.xml -->
-    <string name="now_playing_label">Now Playing</string>
-    <string name="button_back_to_library">Back to playlist</string>
+    <!-- Toast message for now_playing.xml -->
+    <string name="toast_msg">Just a mockup - for now ;)</string>
 </resources>

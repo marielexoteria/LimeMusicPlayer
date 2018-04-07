@@ -1,43 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout_items"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:id="@+id/layout_items"
+    android:gravity="center"
     android:orientation="vertical"
-    android:padding="@dimen/space_between_elements"
-    android:gravity="center">
+    android:padding="@dimen/space_between_elements">
 
     <ImageView
+        android:id="@+id/file_icon"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/file_icon"
-        tools:src="@drawable/ic_launcher_background"/>
+        tools:src="@drawable/ic_launcher_background" />
 
     <TextView
+        android:id="@+id/list_artist_or_author"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/list_artist_or_author"
         android:paddingTop="@dimen/space_between_elements"
         android:textColor="@color/category_text"
-        tools:text="@string/list_item_artist_author"
-        android:textStyle="bold">
-    </TextView>
+        android:textStyle="bold"
+        tools:text="@string/list_item_artist_author"></TextView>
 
     <TextView
+        android:id="@+id/list_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/list_title"
+        android:gravity="center"
         android:paddingTop="@dimen/padding_between_title_artist"
-        tools:text="@string/list_item_title"
-        android:gravity="center">
-    </TextView>
+        tools:text="@string/list_item_title"></TextView>
 
     <ImageButton
+        android:id="@+id/list_play_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/list_play_button"
-        android:background="@drawable/play_button"
-        android:layout_marginTop="@dimen/padding_between_title_button"/>
+        android:layout_marginTop="@dimen/padding_between_title_button"
+        android:background="@drawable/play_button" />
 
 </LinearLayout>

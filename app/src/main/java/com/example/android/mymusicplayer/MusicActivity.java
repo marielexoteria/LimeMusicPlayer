@@ -17,6 +17,9 @@ public class MusicActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.sound_file_list);
 
+        //Enabling UP navigation
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
         //Creating an ArrayList of the custom class "SoundFile" to display the info about the music files
         ArrayList<SoundFile> musicFiles = new ArrayList<SoundFile>();
 
@@ -26,14 +29,22 @@ public class MusicActivity extends AppCompatActivity {
          * @param artistOrAuthor    The artist of a music file, for ex. Michael Jackson
          * @param title             The title of the song, for ex. Beat It
          */
-        musicFiles.add(new SoundFile(R.drawable.music_icon, "Michael Jackson", "Beat it", R.drawable.music_image_now_playing));
-        musicFiles.add(new SoundFile(R.drawable.music_icon, "A band of bitches", "Mambo en trompeta", R.drawable.music_image_now_playing));
-        musicFiles.add(new SoundFile(R.drawable.music_icon, "Juan Luis Guerra", "Fogaraté", R.drawable.music_image_now_playing));
-        musicFiles.add(new SoundFile(R.drawable.music_icon, "Earth, Wind & Fire", "Beijo", R.drawable.music_image_now_playing));
-        musicFiles.add(new SoundFile(R.drawable.music_icon, "Erasure", "Breath of life", R.drawable.music_image_now_playing));
-        musicFiles.add(new SoundFile(R.drawable.music_icon, "Otros Aires", "El amor que se baila", R.drawable.music_image_now_playing));
-        musicFiles.add(new SoundFile(R.drawable.music_icon, "Bajofondo Tango Club", "Montserrat", R.drawable.music_image_now_playing));
-        musicFiles.add(new SoundFile(R.drawable.music_icon, "Rita Indiana y sus misterios", "El blú del ping pong", R.drawable.music_image_now_playing));
+        musicFiles.add(new SoundFile(R.drawable.music_icon, R.string.music_artist_one,
+                R.string.music_song_name_one, R.drawable.music_image_now_playing));
+        musicFiles.add(new SoundFile(R.drawable.music_icon, R.string.music_artist_two,
+                R.string.music_song_name_two, R.drawable.music_image_now_playing));
+        musicFiles.add(new SoundFile(R.drawable.music_icon, R.string.music_artist_three,
+                R.string.music_song_name_three, R.drawable.music_image_now_playing));
+        musicFiles.add(new SoundFile(R.drawable.music_icon, R.string.music_artist_four,
+                R.string.music_song_name_four, R.drawable.music_image_now_playing));
+        musicFiles.add(new SoundFile(R.drawable.music_icon, R.string.music_artist_five,
+                R.string.music_song_name_five, R.drawable.music_image_now_playing));
+        musicFiles.add(new SoundFile(R.drawable.music_icon, R.string.music_artist_six,
+                R.string.music_song_name_six, R.drawable.music_image_now_playing));
+        musicFiles.add(new SoundFile(R.drawable.music_icon, R.string.music_artist_seven,
+                R.string.music_song_name_seven, R.drawable.music_image_now_playing));
+        musicFiles.add(new SoundFile(R.drawable.music_icon, R.string.music_artist_eight,
+                R.string.music_song_name_eight, R.drawable.music_image_now_playing));
 
         //Creating a GridView to display the tracks - child views and applying the background color
         SoundFileAdapter musicItemsAdapter = new SoundFileAdapter(this, musicFiles, R.color.background_color);
@@ -41,16 +52,20 @@ public class MusicActivity extends AppCompatActivity {
         musicGridView.setAdapter(musicItemsAdapter);
         musicGridView.setBackgroundColor(getResources().getColor(R.color.category_color));
 
-        //Adding functionality of the back button > going back to the previous screen
-        //Answer from https://stackoverflow.com/questions/4038479/android-go-back-to-previous-activity
-        final Button backToPreviousScreen = (Button)findViewById(R.id.back_to_main_screen);
-        backToPreviousScreen.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                onBackPressed();
-            }
-        });
+    }
 
+    //Up navigation goes back to the parent activity. This code alters the visual behavior and shows
+    //the child activity moving to the right and then the parent activity shows.
+    //Using "NavUtils.navigateUpFromSameTask(this);" does the opposite effect
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            // Respond to the action bar's Up/Home button
+            case android.R.id.home:
+                onBackPressed();
+                return true;
+        }
+        return super.onOptionsItemSelected(item);
     }
 
 }

@@ -2,6 +2,7 @@ package com.example.android.mymusicplayer;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.GridView;
@@ -15,6 +16,9 @@ public class PodcastsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.sound_file_list);
 
+        //Enabling UP navigation
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
         //Creating an ArrayList of the custom class "SoundFile" to display the info about the music files
         ArrayList<SoundFile> podcastFiles = new ArrayList<SoundFile>();
 
@@ -24,14 +28,22 @@ public class PodcastsActivity extends AppCompatActivity {
          * @param artistOrAuthor    The person(s) recording the podcast, for ex. UXPodcast
          * @param title             The chapter of the podcast, for ex. #180 Mobile frustrations with Lina Hansson
          */
-        podcastFiles.add(new SoundFile(R.drawable.podcasts_icon, "Podcast UX4You", "Chapter 1: What is UX?", R.drawable.podcasts_image_now_playing));
-        podcastFiles.add(new SoundFile(R.drawable.podcasts_icon, "Podcast UX4You", "Chapter 2: Design Thinking", R.drawable.podcasts_image_now_playing));
-        podcastFiles.add(new SoundFile(R.drawable.podcasts_icon, "Podcast UX4You", "Chapter 3: How to User research", R.drawable.podcasts_image_now_playing));
-        podcastFiles.add(new SoundFile(R.drawable.podcasts_icon, "Podcast UX4You", "Chapter 4: User journeys", R.drawable.podcasts_image_now_playing));
-        podcastFiles.add(new SoundFile(R.drawable.podcasts_icon, "Podcast UX4You", "Chapter 5: Analyzing information", R.drawable.podcasts_image_now_playing));
-        podcastFiles.add(new SoundFile(R.drawable.podcasts_icon, "Podcast UX4You", "Chapter 6: Idea generation", R.drawable.podcasts_image_now_playing));
-        podcastFiles.add(new SoundFile(R.drawable.podcasts_icon, "Podcast UX4You", "Chapter 7: Selling the value of UX", R.drawable.podcasts_image_now_playing));
-        podcastFiles.add(new SoundFile(R.drawable.podcasts_icon, "Podcast UX4You", "Chapter 8: Open forum", R.drawable.podcasts_image_now_playing));
+        podcastFiles.add(new SoundFile(R.drawable.podcasts_icon, R.string.podcast_author,
+                R.string.podcast_chapter_one, R.drawable.podcasts_image_now_playing));
+        podcastFiles.add(new SoundFile(R.drawable.podcasts_icon, R.string.podcast_author,
+                R.string.podcast_chapter_two, R.drawable.podcasts_image_now_playing));
+        podcastFiles.add(new SoundFile(R.drawable.podcasts_icon, R.string.podcast_author,
+                R.string.podcast_chapter_three, R.drawable.podcasts_image_now_playing));
+        podcastFiles.add(new SoundFile(R.drawable.podcasts_icon, R.string.podcast_author,
+                R.string.podcast_chapter_four, R.drawable.podcasts_image_now_playing));
+        podcastFiles.add(new SoundFile(R.drawable.podcasts_icon, R.string.podcast_author,
+                R.string.podcast_chapter_five, R.drawable.podcasts_image_now_playing));
+        podcastFiles.add(new SoundFile(R.drawable.podcasts_icon, R.string.podcast_author,
+                R.string.podcast_chapter_six, R.drawable.podcasts_image_now_playing));
+        podcastFiles.add(new SoundFile(R.drawable.podcasts_icon, R.string.podcast_author,
+                R.string.podcast_chapter_seven, R.drawable.podcasts_image_now_playing));
+        podcastFiles.add(new SoundFile(R.drawable.podcasts_icon, R.string.podcast_author,
+                R.string.podcast_chapter_eight, R.drawable.podcasts_image_now_playing));
 
         //Creating a GridView to display the tracks - child views and applying the background color
         SoundFileAdapter podcastItemsAdapter = new SoundFileAdapter(this, podcastFiles, R.color.background_color);
@@ -39,15 +51,20 @@ public class PodcastsActivity extends AppCompatActivity {
         podcastGridView.setAdapter(podcastItemsAdapter);
         podcastGridView.setBackgroundColor(getResources().getColor(R.color.category_color));
 
-        //Adding functionality of the back button > going back to the previous screen
-        //Answer from https://stackoverflow.com/questions/4038479/android-go-back-to-previous-activity
-        final Button backToPreviousScreen = (Button)findViewById(R.id.back_to_main_screen);
-        backToPreviousScreen.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
+    }
+
+    //Up navigation goes back to the parent activity. This code alters the visual behavior and shows
+    //the child activity moving to the right and then the parent activity shows.
+    //Using "NavUtils.navigateUpFromSameTask(this);" does the opposite effect
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            // Respond to the action bar's Up/Home button
+            case android.R.id.home:
                 onBackPressed();
-            }
-        });
+                return true;
+        }
+        return super.onOptionsItemSelected(item);
     }
 
 }

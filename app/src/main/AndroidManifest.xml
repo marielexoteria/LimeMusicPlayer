@@ -18,17 +18,47 @@
         </activity>
         <activity
             android:name=".MusicActivity"
-            android:label="@string/music_view"/>
+            android:label="@string/music_view"
+            android:parentActivityName=".MainActivity">
+
+            <!-- Parent activity meta-data to support 4.0 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
+
         <activity
             android:name=".PodcastsActivity"
-            android:label="@string/podcasts_view" />
+            android:label="@string/podcasts_view"
+            android:parentActivityName=".MainActivity">
+
+            <!-- Parent activity meta-data to support 4.0 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
+
         <activity
             android:name=".AudiobooksActivity"
-            android:label="@string/audiobooks_view" />
-        <activity android:name=".NowPlayingActivity"
-            android:label="@string/now_playing_view">
+            android:label="@string/audiobooks_view"
+            android:parentActivityName=".MainActivity">
 
+            <!-- Parent activity meta-data to support 4.0 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
         </activity>
+
+        <activity android:name=".NowPlayingActivity"
+            android:label="@string/now_playing_view"
+            android:parentActivityName=".MainActivity">
+
+            <!-- Parent activity meta-data to support 4.0 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
+
     </application>
 
 </manifest>

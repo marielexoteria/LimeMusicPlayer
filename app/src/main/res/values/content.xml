@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Titles to display on the Music activity -->
+    <!-- Artists -->
+    <string name="music_artist_one">Michael Jackson</string>
+    <string name="music_artist_two">A band of bitches</string>
+    <string name="music_artist_three">Juan Luis Guerra</string>
+    <string name="music_artist_four">Earth, Wind &amp; Fire</string>
+    <string name="music_artist_five">Erasure</string>
+    <string name="music_artist_six">Otros Aires</string>
+    <string name="music_artist_seven">Bajofondo Tango Club</string>
+    <string name="music_artist_eight">Rita Indiana y sus misterios</string>
+
+    <!-- Song names -->
+    <string name="music_song_name_one">Beat it</string>
+    <string name="music_song_name_two">Mambo en trompeta</string>
+    <string name="music_song_name_three">Fogaraté</string>
+    <string name="music_song_name_four">Beijo</string>
+    <string name="music_song_name_five">Breath of life</string>
+    <string name="music_song_name_six">El amor que se baila</string>
+    <string name="music_song_name_seven">Montserrat</string>
+    <string name="music_song_name_eight">El blú del ping pong</string>
+
+
+
+    <!-- Titles to display on the Podcasts activity -->
+    <!-- Authors -->
+    <string name="podcast_author">Podcast UX4You</string>
+
+    <!-- Chapters -->
+    <string name="podcast_chapter_one">Chapter 1: What is UX?</string>
+    <string name="podcast_chapter_two">Chapter 2: Design Thinking</string>
+    <string name="podcast_chapter_three">Chapter 3: How to User research</string>
+    <string name="podcast_chapter_four">Chapter 4: User journeys</string>
+    <string name="podcast_chapter_five">Chapter 5: Analyzing information</string>
+    <string name="podcast_chapter_six">Chapter 6: Idea generation</string>
+    <string name="podcast_chapter_seven">Chapter 7: Selling the value of UX</string>
+    <string name="podcast_chapter_eight">Chapter 8: Open forum</string>
+
+    <!-- Titles to display on the Audiobooks activity -->
+    <!-- Authors -->
+    <string name="audiobooks_author_one">JK Rowling</string>
+    <string name="audiobooks_author_two">Paola Chaljub</string>
+    <string name="audiobooks_author_three">Stieg Larsson</string>
+    <string name="audiobooks_author_four">Gabriel G. Márquez</string>
+    <string name="audiobooks_author_five">Camilla Läckberg</string>
+    <string name="audiobooks_author_six">Isabel Allende</string>
+    <string name="audiobooks_author_seven">Jacinto Gimbernard</string>
+    <string name="audiobooks_author_eight">Jens Lapidus</string>
+
+    <!-- Book titles -->
+    <string name="audiobooks_title_one">Fantastic beasts and where to find them</string>
+    <string name="audiobooks_title_two">Soltera en tiempos modernos</string>
+    <string name="audiobooks_title_three">Män som hatar kvinnor</string>
+    <string name="audiobooks_title_four">Del amor y otros demonios</string>
+    <string name="audiobooks_title_five">Olycksfågeln</string>
+    <string name="audiobooks_title_six">El cuaderno de Maya</string>
+    <string name="audiobooks_title_seven">Medalaganario</string>
+    <string name="audiobooks_title_eight">Snabba cash</string>
+
+
+</resources>

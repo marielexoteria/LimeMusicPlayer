@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -19,6 +20,9 @@ public class NowPlayingActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.now_playing);
+
+        //Enabling UP navigation
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         //Get the data from previous activity (selected song in the playlist) and display it
         //Help from my mentor: how to get the TextViews to display the correct sound file info
@@ -37,24 +41,31 @@ public class NowPlayingActivity extends AppCompatActivity {
 
             //As the functionality of a music player app is not required, I wanted to display toasts in case
             //a user clicks/touches on the 3 buttons that simulate a player app
+            //NO FUNCIONA - NO DESPLIEGA EL TOAST DESDE QUE AGREGUÉ EL UP NAVIGATION
             LinearLayout musicControls = (LinearLayout)findViewById(R.id.music_controls);
             musicControls.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    Toast.makeText(NowPlayingActivity.this, "Just a mockup - for now ;)", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(NowPlayingActivity.this, R.string.toast_msg, Toast.LENGTH_SHORT).show();
                 }
             });
 
-            //Adding functionality of the back button > going back to the previous screen
-            //Answer from https://stackoverflow.com/questions/4038479/android-go-back-to-previous-activity
-            final Button backToPreviousScreen = (Button)findViewById(R.id.back_to_library);
-            backToPreviousScreen.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    onBackPressed();
-                }
-            });
         }
+    }
+
+    //UP navigation code modified to go to the previous activity (Audiobooks, Podcast or Music). This
+    //code alters the visual behavior and shows the NowPlaying activity moving to the right and then
+    //the Audiobooks/Podcasts/Music activity shows.
+    //Using "NavUtils.navigateUpFromSameTask(this);" does the opposite effect
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            // Respond to the action bar's Up/Home button
+            case android.R.id.home:
+                this.finish();
+                return true;
+        }
+        return super.onOptionsItemSelected(item);
     }
 
 }
