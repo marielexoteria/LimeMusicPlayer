@@ -1,5 +1,6 @@
 App Name
-MyMusicPlayer v1.0
+LimeMusicPlayer v1.0
+(formerly MyMusicPlayer)
 
 App description
 App that shows the structure of a music player. It is used to demonstrate abilities to create a multi-screen app using intents and creating custom classes. App made for educational purposes, as part of the Android Basics Nanodegree program at Udacity. 
